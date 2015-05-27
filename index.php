@@ -2,9 +2,9 @@
 
 //echo phpinfo();
 
+include "odbc_conf.php";
 
-
-$connect = odbc_connect('plactrei','placomp_dba','@orion1!');
+$connect = odbc_connect($odbc_conn, $user, $passwd);
 
 if ($connect) {
     //echo "Connection succeeded.";
@@ -37,6 +37,10 @@ if ($connect) {
 }
 else {
     echo "Connection failed.";
+}
+
+function getTables(){
+
 }
 
 ?>
